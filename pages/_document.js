@@ -24,10 +24,15 @@ export default class MyDocument extends Document {
         return (
             <html>
                 <Head>
-                    <title>nextjs5-base-boilerplate</title>
+                    <meta charSet="utf-8"/>
+                    <meta name="robots" content="index,follow"/>
+                    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+                    <title>nextjs-base-boilerplate</title>
+
+                    <link rel="stylesheet" href="/_next/static/style.css" />
                     {this.props.styleTags}
                 </Head>
-                <body>
+                <body className="body">
                     {/* _document */}
                     <Main/>
 

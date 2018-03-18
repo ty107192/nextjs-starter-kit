@@ -5,6 +5,7 @@ import pageWithIntl from '@hoc/pageWithIntl';
 import styled from 'styled-components';
 import Lang from '@atoms/lang';
 import {Router, Link} from '@routes/web';
+import Layout from '@layouts';
 
 class Home extends Component {
     static async getInitialProps({req}) {
@@ -27,9 +28,3 @@ class Home extends Component {
 }
 
 export default pageWithIntl(Home);
-
-const Layout = styled.div`
-  width: 150px;
-  height: 150px;
-  background-color: aqua;
-`;
