@@ -1,0 +1,7 @@
+*.spec.js
+*.test.js
+src/server/*.js
+src/middleware/*.js
+pages/_document.js
+pages/_error.js
+next.config.js
