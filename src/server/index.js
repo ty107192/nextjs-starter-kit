@@ -71,7 +71,10 @@ i18nInstance
             // Middleware
             server.use(i18nextMiddleware.handle(i18nInstance));
             server.use('/locales', express.static(join(__dirname, '../../static/locales'))); // serve locales for client
-            server.post('/locales/add/:lng/:ns', i18nextMiddleware.missingKeyHandler(i18nInstance)); //missing keys
+            if(dev){
+                // 只有在開發模式才進行補單字
+                server.post('/locales/add/:lng/:ns', i18nextMiddleware.missingKeyHandler(i18nInstance));
+            }
 
             server.use(helmet());
             server.use(cookieParser());
