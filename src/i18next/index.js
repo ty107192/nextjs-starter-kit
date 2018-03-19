@@ -17,7 +17,7 @@ const options = {
     // setting cookie
     detection: {
         lookupCookie: 'i18next',
-        caches: ['cookie'], // ['cookie']
+        caches: ['cookie'] // ['cookie']
     },
 
     debug: process.env.I18N_DEBUG === 'true',

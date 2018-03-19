@@ -54,8 +54,8 @@ i18n
             caches: false // ['cookie']
         },
         backend: {
-            loadPath: join(__dirname, '../static/locales/{{lng}}/{{ns}}.json'),
-            addPath: join(__dirname, '../static/locales/{{lng}}/{{ns}}.missing.json')
+            loadPath: join(__dirname, '../../static/locales/{{lng}}/{{ns}}.json'),
+            addPath: join(__dirname, '../../static/locales/{{lng}}/{{ns}}.missing.json')
         }
     }, () => {
 
@@ -70,7 +70,7 @@ i18n
 
             // Middleware
             server.use(i18nextMiddleware.handle(i18n));
-            server.use('/locales', express.static(join(__dirname, '../static/locales'))); // serve locales for client
+            server.use('/locales', express.static(join(__dirname, '../../static/locales'))); // serve locales for client
             server.post('/locales/add/:lng/:ns', i18nextMiddleware.missingKeyHandler(i18n)); //missing keys
 
             server.use(helmet());
