@@ -2,23 +2,13 @@ import Document, {Head, Main, NextScript} from 'next/document';
 import {ServerStyleSheet} from 'styled-components';
 
 export default class MyDocument extends Document {
-    static async getInitialProps(context) {
-        const props = await super.getInitialProps(context);
+    static async getInitialProps({renderPage}) {
 
         const sheet = new ServerStyleSheet();
-        const page = context.renderPage(App => props => sheet.collectStyles(<App {...props} />));
+        const page = renderPage(App => props => sheet.collectStyles(<App {...props} />));
         const styleTags = sheet.getStyleElement();
-
-        const {req: {locale, localeDataScript}} = context;
-        return {
-            ...props,
-            ...page,
-            styleTags,
-            locale,
-            localeDataScript
-        };
+        return {...page, styleTags};
     }
-
 
     render() {
         return (
@@ -32,15 +22,9 @@ export default class MyDocument extends Document {
                     <link rel="stylesheet" href="/_next/static/style.css" />
                     {this.props.styleTags}
                 </Head>
-                <body className="body">
+                <body>
                     {/* _document */}
                     <Main/>
-
-                    <script
-                        dangerouslySetInnerHTML={{
-                            __html: this.props.localeDataScript
-                        }}
-                    />
 
                     <NextScript/>
                 </body>

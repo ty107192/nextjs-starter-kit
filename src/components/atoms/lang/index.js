@@ -1,9 +1,8 @@
 import React from 'react';
-import {FormattedMessage} from 'react-intl';
 
 export default class Lang extends React.PureComponent {
     render() {
-        return (<FormattedMessage {...this.props}/>);
+        return (<div>test</div>);
     }
 }
 Lang.defaultProps = {
