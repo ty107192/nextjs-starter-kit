@@ -6,11 +6,15 @@ import '@styles/app.scss';
 export default class Layout extends React.PureComponent {
     static propTypes = {
         title: PropTypes.string,
-        children: PropTypes.string.isRequired
+        children: PropTypes.oneOfType([
+            PropTypes.arrayOf(PropTypes.node),
+            PropTypes.node
+        ])
     };
 
     static defaultProps = {
-        title: ''
+        title: '',
+        children: ''
     };
 
     render() {

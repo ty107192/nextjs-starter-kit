@@ -2,20 +2,6 @@
   "presets": [
     "next/babel"
   ],
-  "env": {
-    "development": {
-      "plugins": [
-        "react-intl"
-      ]
-    },
-    "production": {
-      "plugins": [
-        ["react-intl", {
-          "messagesDir": "lang/.messages/"
-        }]
-      ]
-    }
-  },
   "plugins": [
     ["styled-components", { "ssr": true, "displayName": true, "preprocess": false } ],
     [
@@ -32,7 +18,8 @@
           "@styles": "./src/styles",
           "@utils": "./src/utils",
           "@stores": "./src/stores",
-          "@routes": "./src/routes"
+          "@routes": "./src/routes",
+          "@i18next": "./src/i18next"
         }
       }
     ]
