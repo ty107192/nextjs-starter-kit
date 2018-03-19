@@ -1,15 +1,9 @@
 import React, {Component} from 'react';
-import {translate} from 'react-i18next';
-import i18n from '@i18next';
+import {i18nInstance} from '@i18next';
 import Layout from '@layouts';
+import {withI18next} from '@hoc/withI18next';
 
 class I18Next extends Component {
-    static async getInitialProps({req}) {
-        if (req && !process.browser) return i18n.getInitialProps(req, ['common']);
-        return {};
-    }
-
-
     render() {
         const {t} = {...this.props};
 
@@ -20,26 +14,26 @@ class I18Next extends Component {
 
                     <button
                         onClick={() => {
-                            i18n.changeLanguage('zh-TW');
+                            i18nInstance.changeLanguage('zh-TW');
                         }}
                     >繁體中文
                     </button>
                     <button
                         onClick={() => {
-                            i18n.changeLanguage('zh-CN');
+                            i18nInstance.changeLanguage('zh-CN');
                         }}
                     >简体中文
                     </button>
                     <button
                         onClick={() => {
-                            i18n.changeLanguage('en-US');
+                            i18nInstance.changeLanguage('en-US');
                         }}
                     >ENGLISH
                     </button>
 
                     <br/>
                     <br/>
-                    <div>{t('welcome')}</div>
+                    <div>{t('welcome', '預設文字')}</div>
 
                 </div>
             </Layout>
@@ -47,4 +41,4 @@ class I18Next extends Component {
     }
 }
 
-export default translate(['common'], {i18n, wait: process.browser})(I18Next);
+export default withI18next(['common'])(I18Next);

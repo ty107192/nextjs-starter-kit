@@ -17,7 +17,7 @@ const webRouter = require('../routes/web');
 const apiRouter = require('../routes/api');
 
 //i18next
-const i18n = require('../i18next');
+const {i18nInstance} = require('../i18next');
 const Backend = require('i18next-node-fs-backend');
 const i18nextMiddleware = require('i18next-express-middleware');
 
@@ -37,7 +37,7 @@ const handle = webRouter.getRequestHandler(app);
 
 // init i18next with serverside settings
 // using i18next-express-middleware
-i18n
+i18nInstance
     .use(Backend)
     .use(cookieParser())
     .use(i18nextMiddleware.LanguageDetector)
@@ -69,9 +69,9 @@ i18n
             }));
 
             // Middleware
-            server.use(i18nextMiddleware.handle(i18n));
+            server.use(i18nextMiddleware.handle(i18nInstance));
             server.use('/locales', express.static(join(__dirname, '../../static/locales'))); // serve locales for client
-            server.post('/locales/add/:lng/:ns', i18nextMiddleware.missingKeyHandler(i18n)); //missing keys
+            server.post('/locales/add/:lng/:ns', i18nextMiddleware.missingKeyHandler(i18nInstance)); //missing keys
 
             server.use(helmet());
             server.use(cookieParser());
@@ -97,7 +97,7 @@ i18n
     });
 
 
-i18n.on('languageChanged', (lng) => {
+i18nInstance.on('languageChanged', (lng) => {
     // Keep language in sync
     req.language = req.locale = req.lng = lng;
     req.languages = i18next.services.languageUtils.toResolveHierarchy(lng);
