@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
+import '@styles/bootstrap.scss';
 import '@styles/app.scss';
 
 export default class Layout extends React.PureComponent {
@@ -19,7 +20,7 @@ export default class Layout extends React.PureComponent {
 
     render() {
         return (
-            <div className="layout-base">
+            <div>
                 {this.props.title && (
                     <Head>
                         <title>{this.props.title}</title>
