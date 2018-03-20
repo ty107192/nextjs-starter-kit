@@ -1,3 +1,6 @@
-.layout-base {
-  background-color: #afffdc;
-}
+@import "./common/mixin";
+@import "./common/variable";
+@import "./common/custom";
+
+/* Plugin */
+@import "plugins/nprogress/nprogress";

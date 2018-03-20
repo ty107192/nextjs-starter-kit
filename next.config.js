@@ -3,7 +3,7 @@ const dotEnv = require('dotenv-webpack');
 
 const path = require('path');
 const webRouter = require('./src/routes/web');
-const withSass = require('@zeit/next-sass')
+const withSass = require('@zeit/next-sass');
 
 module.exports = withSass({
     assetPrefix: process.env.PROXY_URL ? process.env.PROXY_URL : '', //PROXY_URL路徑

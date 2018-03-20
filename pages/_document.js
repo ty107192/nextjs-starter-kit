@@ -19,6 +19,7 @@ export default class MyDocument extends Document {
                     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
                     <title>nextjs-base-boilerplate</title>
 
+                    <link rel="stylesheet" href="/static/plugins/bootstrap4/bootstrap.min.css" />
                     <link rel="stylesheet" href="/_next/static/style.css" />
                     {this.props.styleTags}
                 </Head>
