@@ -9,11 +9,13 @@ class I18Next extends Component {
         const {t} = {...this.props};
 
         return (
-            <Layout>
+            <Layout title="i18Next 在地化">
                 <div className="container">
                     <div className="row">
-                        <div className="col-12">
-                            <h2>i18Next 多國語系</h2>
+                        <div className="col-6">
+                            <h2>i18Next 在地化</h2>
+                        </div>
+                        <div className="col-6 text-right">
                             <button
                                 onClick={() => {
                                     i18nInstance.changeLanguage('zh-TW');
@@ -32,9 +34,10 @@ class I18Next extends Component {
                                 }}
                             >ENGLISH
                             </button>
-
-                            <br/>
-                            <br/>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-12">
                             <div>{t('welcome', '預設文字')}</div>
                         </div>
                     </div>
