@@ -1,10 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Router from 'next/router';
 import NProgress from 'nprogress';
+import Header from '@organisms/header/index';
 import '@styles/app.scss';
-
 
 Router.onRouteChangeStart = (url) => {
     NProgress.start();
@@ -32,13 +33,22 @@ export default class Layout extends React.PureComponent {
             <div>
                 {this.props.title && (
                     <Head>
-                        <title>{this.props.title}</title>
+                        <title>Next | {this.props.title}</title>
                     </Head>
                 )}
 
-                {this.props.children}
+                <Header/>
+                <Main>
+                    {this.props.children}
+                </Main>
+                <footer/>
             </div>
         );
     }
 }
+
+const Main = styled.main`
+  padding-top: 10px;
+  font-size: 1.4rem;
+`
 

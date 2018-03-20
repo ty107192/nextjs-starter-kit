@@ -1,0 +1,15 @@
+.btn-lg, .btn-group-lg>.btn {
+  padding: 0rem 1rem;
+  line-height: 3.7rem;
+  border-radius: .2rem;
+}
+
+
+//去除按鈕陰影
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-primary.dropdown-toggle:focus,
+.btn-primary:focus, .btn-primary.focus{
+  box-shadow: none;
+}

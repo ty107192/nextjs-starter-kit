@@ -1,34 +1,26 @@
-/* Common */
-*,html,body {
-  font-family: $font-family-default;
+// 垂直置中(外層必須給高度)
+.text-middle{
+  &::before{
+    content:'';
+    height:100%;
+    display:inline-block;
+    vertical-align:middle;
+  }
+  height: 100%;
 }
 
-html{
-  font-size: $font-size-default;
+// Flexbox 垂直置中(外層必須給高度)
+.flex-middle{
+  display: inline-flex;
+  justify-content: center;
 }
 
-ul{
-  list-style: none;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-ol{
-  padding-left: 15px;
-}
-
-.btn-lg, .btn-group-lg>.btn {
-  padding: 0rem 1rem;
-  line-height: 3.7rem;
-  border-radius: .2rem;
-}
-
-
-//去除按鈕陰影
-.btn-primary:not(:disabled):not(.disabled):active:focus,
-.btn-primary:not(:disabled):not(.disabled).active:focus,
-.btn-outline-primary:not(:disabled):not(.disabled):active:focus,
-.show>.btn-primary.dropdown-toggle:focus,
-.btn-primary:focus, .btn-primary.focus{
-  box-shadow: none;
+// 浮動水平置中
+.absolute-center{
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align:center;
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -21,7 +21,7 @@ const options = {
     },
 
     debug: process.env.I18N_DEBUG === 'true',
-    saveMissing: process.env.NODE_ENV !== 'production',
+    saveMissing: false,
 
     interpolation: {
         escapeValue: false, // not needed for react!!

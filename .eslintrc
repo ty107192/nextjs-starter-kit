@@ -22,7 +22,8 @@
     "prefer-destructuring": "off",
     "jsx-a11y/label-has-for": "off",
     "comma-dangle": ["error", "never"],
-    "no-underscore-dangle": ["error", { "allow": ["__NEXT_DATA__"] }]
+    "no-underscore-dangle": ["error", { "allow": ["__NEXT_DATA__"] }],
+    "no-script-url": "off"
   },
   "globals": {
     "fetch": true,

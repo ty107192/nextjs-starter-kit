@@ -1,20 +1,25 @@
 import React, {Component} from 'react';
-import {i18nInstance} from '@i18next';
+import styled from 'styled-components';
 import Layout from '@layouts/base';
 import {withI18next} from '@hoc/withI18next';
 
 
-class I18Next extends Component {
+class About extends Component {
     render() {
         const {t} = {...this.props};
 
         return (
-            <Layout title="i18Next 在地化">
+            <Layout title={t('about')}>
                 <section>
                     <div className="container">
                         <div className="row">
                             <div className="col-12">
-                                <div>{t('welcome')}</div>
+                                <h1>{t('about:title')}</h1>
+                                <div style={{paddingTop: '20px'}}>
+                                    <Desc>
+                                        {t('about:my-name')}
+                                    </Desc>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -25,4 +30,9 @@ class I18Next extends Component {
     }
 }
 
-export default withI18next(['common'])(I18Next);
+export default withI18next(['common', 'about'])(About);
+
+
+const Desc = styled.div`
+  
+`

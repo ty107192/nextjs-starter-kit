@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 
 import styled from 'styled-components';
 import {Router, Link} from '@routes/web';
-import Layout from '@layouts';
+import Layout from '@layouts/base/index';
+
 
 class Home extends Component {
     static async getInitialProps({req}) {

@@ -1,27 +1,42 @@
 import React, {Component} from 'react';
-
 import styled from 'styled-components';
-import Lang from '@atoms/lang';
-import {Router, Link} from '@routes/web';
-import Layout from '@layouts';
+import Layout from '@layouts/base';
+import {withI18next} from '@hoc/withI18next';
+
 
 class Home extends Component {
-    static async getInitialProps({req}) {
-        return {someDate: Date.now()};
-    }
-
     render() {
+        const {t} = {...this.props};
+
         return (
-            <Layout>
-                <button onClick={() => Router.pushRoute('test-detail', {id: 1})}>1號機</button>
-                <button onClick={() => Router.pushRoute('test-detail', {id: 2})}>2號機</button>
-                {/* <Link route="testDetail" params={{id: 3}}> */}
-                {/* <a>3號</a> */}
-                {/* </Link> */}
-                {/* <Lang id="description"/> */}
+            <Layout title={t('menu.home')}>
+                <section>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-12">
+                                <h1>{t('home:title')}</h1>
+                                <div style={{paddingTop: '20px'}}>
+                                    <h2>
+                                        {t('home:sub-title')}
+                                    </h2>
+                                    <Desc>
+                                        {t('home:sub-desc', 'We don’t make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code.')}
+                                    </Desc>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
             </Layout>
         );
     }
 }
 
-export default Home;
+export default withI18next(['common', 'home'])(Home);
+
+
+const Desc = styled.div`
+  
+`
