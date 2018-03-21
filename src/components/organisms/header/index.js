@@ -16,7 +16,11 @@ export default class Header extends React.Component {
                         <div className="col-6">
                             <div className="row">
                                 <div className="col-auto">
-                                    <Title>Nextjs Starter Kit</Title>
+                                    <Title>
+                                        <a href="javascript:;" onClick={() => Router.pushRoute('home')}>
+                                            Nextjs Starter Kit
+                                        </a>
+                                    </Title>
                                 </div>
                                 <div className="col">
                                     <NavMenu/>
@@ -42,4 +46,12 @@ const HeaderCustom = styled.header`
 const Title = styled.span`
    color: #fff;
    font-size: 2.4rem;
+    
+   a{
+     color:#fff;
+     
+     &:hover{
+      color:#2be0a8;
+     }
+   }
 `

@@ -17,8 +17,9 @@ class NavMenu extends React.Component {
                     <a>{t('menu.home')}</a>
                 </Link>
                 <span> | </span>
-                <a href="javascript:;" onClick={() => Router.pushRoute('news')}>{t('menu.news')}</a>
-                <span> | </span>
+                <Link route="news">
+                    <a>{t('menu.news')}</a>
+                </Link>
             </nav>
         );
     }
