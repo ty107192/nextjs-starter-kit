@@ -19,13 +19,10 @@ class NavMenu extends React.Component {
                 <span> | </span>
                 <a href="javascript:;" onClick={() => Router.pushRoute('news')}>{t('menu.news')}</a>
                 <span> | </span>
-                <Link route="router-id" params={{id: 3}}>
-                    <a>3號</a>
-                </Link>
             </nav>
         );
     }
 }
 
-export default withI18next(['common'])(NavMenu);
+export default withI18next()(NavMenu);
 

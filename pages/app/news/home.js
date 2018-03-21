@@ -20,12 +20,12 @@ class Home extends Component {
                                     <ol>
                                         <li>
                                             <Link route="news-detail" params={{id: 1}}>
-                                                <a>{t('news:first')}</a>
+                                                <a>{t('news.firstInfo')}</a>
                                             </Link>
                                         </li>
                                         <li>
                                             <Link route="news-detail" params={{id: 2}}>
-                                                <a>{t('news:second')}</a>
+                                                <a>{t('news.secondInfo')}</a>
                                             </Link>
                                         </li>
                                     </ol>
@@ -40,5 +40,5 @@ class Home extends Component {
     }
 }
 
-export default withI18next(['common', 'news'])(Home);
+export default withI18next()(Home);
 

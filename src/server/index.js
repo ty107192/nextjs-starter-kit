@@ -51,6 +51,7 @@ i18nInstance
         detection: {
             order: ['querystring', 'cookie', 'header'],
             lookupQuerystring: 'lang',
+            lookupSession: 'i18next',
             caches: false // ['cookie']
         },
         backend: {

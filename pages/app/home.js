@@ -14,14 +14,14 @@ class Home extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-12">
-                                <h1>{t('home:title')}</h1>
+                                <h1>{t('home.title')}</h1>
                                 <div style={{paddingTop: '20px'}}>
                                     <h2>
-                                        {t('home:sub-title')}
+                                        {t('home.sub-title')}
                                     </h2>
-                                    <Desc>
-                                        {t('home:sub-desc', 'We don’t make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code.')}
-                                    </Desc>
+                                    <div>
+                                        {t('home.sub-desc')}
+                                    </div>
                                 </div>
 
                             </div>
@@ -34,9 +34,4 @@ class Home extends Component {
     }
 }
 
-export default withI18next(['common', 'home'])(Home);
-
-
-const Desc = styled.div`
-  
-`
+export default withI18next()(Home);

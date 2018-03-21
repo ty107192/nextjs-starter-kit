@@ -1,6 +1,15 @@
 {
-  "menu":{
-    "home":"主頁",
-    "news":"最新消息"
+  "menu": {
+    "home": "主頁",
+    "news": "最新消息"
+  },
+  "home":{
+    "title":"React 用於構建用戶界面的 JavaScript 庫",
+    "sub-title":"一次學習，隨處編寫",
+    "sub-desc":"無論你現在正在使用什麼技術棧，你都可以隨時引入 React 開發新特性。"
+  },
+  "news": {
+    "firstInfo": "vue: 用於構建用戶界面的漸進式框架",
+    "secondInfo": "fkill-cli: 跨平台的 kill 工具"
   }
 }

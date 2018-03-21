@@ -17,6 +17,7 @@ const options = {
     // setting cookie
     detection: {
         lookupCookie: 'i18next',
+        lookupSession: 'i18next',
         caches: ['cookie'] // ['cookie']
     },
 

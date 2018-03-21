@@ -12,35 +12,21 @@ export default class NavLang extends React.Component {
     render() {
         return (
             <nav className="text-middle">
-                <LangLink
-                    href="javascript:;"
-                    onClick={() => {
-                        i18nInstance.changeLanguage('zh-TW');
-                    }}
-                >繁體中文
-                </LangLink>
-                <span> | </span>
-                <LangLink
-                    href="javascript:;"
-                    onClick={() => {
-                        i18nInstance.changeLanguage('zh-CN');
-                    }}
-                >简体中文
-                </LangLink>
-                <span> | </span>
-                <LangLink
-                    href="javascript:;"
-                    onClick={() => {
-                        i18nInstance.changeLanguage('en-US');
-                    }}
-                >ENGLISH
-                </LangLink>
+                <ButtonMenu className="btn btn-outline-info" onClick={() => i18nInstance.changeLanguage('zh-TW')}>
+                    繁中
+                </ButtonMenu>
+                <ButtonMenu className="btn btn-outline-info" onClick={() => i18nInstance.changeLanguage('zh-CN')}>
+                    简中
+                </ButtonMenu>
+                <ButtonMenu className="btn btn-outline-info" onClick={() => i18nInstance.changeLanguage('us-EN')}>
+                    EN
+                </ButtonMenu>
             </nav>
         );
     }
 }
 
-const LangLink = styled.a`
-  color: #fff;
+
+const ButtonMenu = styled.button`
+  margin-left: 5px;
 `
-    
