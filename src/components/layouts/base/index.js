@@ -7,9 +7,7 @@ import NProgress from 'nprogress';
 import Header from '@organisms/header/index';
 import '@styles/app.scss';
 
-Router.onRouteChangeStart = (url) => {
-    NProgress.start();
-};
+Router.onRouteChangeStart = url => NProgress.start();
 Router.onRouteChangeComplete = () => NProgress.done();
 Router.onRouteChangeError = () => NProgress.done();
 
@@ -50,5 +48,5 @@ export default class Layout extends React.PureComponent {
 const Main = styled.main`
   padding-top: 10px;
   font-size: 1.4rem;
-`
+`;
 

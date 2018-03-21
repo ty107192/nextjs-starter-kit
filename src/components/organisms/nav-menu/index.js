@@ -3,7 +3,8 @@ import Head from 'next/head';
 import styled from 'styled-components';
 import NProgress from 'nprogress';
 import {asset} from '@utils/uri';
-import {Router, Link} from '@routes/web';
+import {Router} from '@routes';
+import Link from '@atoms/link';
 import {withI18next} from '@hoc/withI18next';
 
 
@@ -14,11 +15,11 @@ class NavMenu extends React.Component {
         return (
             <nav className="text-middle">
                 <Link route="home">
-                    <a>{t('menu.home')}</a>
+                    <MenuLink href="javascript:;">{t('menu.home')}</MenuLink>
                 </Link>
                 <span> | </span>
-                <Link route="news">
-                    <a>{t('menu.news')}</a>
+                <Link activeClassName="active" route="news">
+                    <MenuLink href="javascript:;">{t('menu.news')}</MenuLink>
                 </Link>
             </nav>
         );
@@ -26,4 +27,12 @@ class NavMenu extends React.Component {
 }
 
 export default withI18next()(NavMenu);
+
+const MenuLink = styled.a`
+  color: #fff;
+  
+  &.active{
+    color: #e00025;
+  }
+`
 

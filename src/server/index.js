@@ -13,7 +13,7 @@ const cors = require('cors');
 const {join} = require('path');
 
 // Routes require
-const webRouter = require('../routes/web');
+const webRouter = require('../routes');
 const apiRouter = require('../routes/api');
 
 //i18next

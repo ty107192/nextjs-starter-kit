@@ -1,26 +1,22 @@
-import React, {Component} from 'react';
+import {Component} from 'react';
 
 import styled from 'styled-components';
-import {Router, Link} from '@routes/web';
-import Layout from '@layouts/base/index';
+import Layout from '@layouts/base';
+import {Router} from '@routes';
+import {withI18next} from '@hoc/withI18next';
 
 
-class Home extends Component {
-    static async getInitialProps({req}) {
-        return {someDate: Date.now()};
-    }
+class Detail extends Component {
 
     render() {
         return (
             <Layout>
-                <button onClick={() => Router.pushRoute('router-id', {id: 1})}>1號機</button>
-                <button onClick={() => Router.pushRoute('router-id', {id: 2})}>2號機</button>
-                <Link route="router-id" params={{id: 3}}>
-                    <a>3號</a>
-                </Link>
+                <div>
+                    test
+                </div>
             </Layout>
         );
     }
 }
 
-export default Home;
+export default withI18next()(Detail);

@@ -2,7 +2,7 @@ require('dotenv').config();
 const dotEnv = require('dotenv-webpack');
 
 const path = require('path');
-const webRouter = require('./src/routes/web');
+const webRouter = require('./src/routes');
 const withSass = require('@zeit/next-sass');
 
 module.exports = withSass({
