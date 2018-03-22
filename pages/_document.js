@@ -12,7 +12,7 @@ export default class MyDocument extends Document {
 
     render() {
         return (
-            <html lang="en">
+            <html>
                 <Head>
                     <meta charSet="utf-8"/>
                     <meta name="robots" content="index,follow"/>
