@@ -2,9 +2,9 @@
   "name": "nextjs-base-boilerplate",
   "version": "1.0.0",
   "scripts": {
-    "dev": "node ./src/server",
+    "dev": "node ./server",
     "build": "next build",
-    "start": "NODE_ENV=production node ./src/server",
+    "start": "NODE_ENV=production node ./server",
     "lint": "eslint ."
   },
   "dependencies": {

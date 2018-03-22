@@ -1,9 +1,6 @@
 import React from 'react';
-import Head from 'next/head';
 import styled from 'styled-components';
-import NProgress from 'nprogress';
 import {asset} from '@utils/uri';
-import {Router} from '@routes';
 import Link from '@atoms/link';
 import {withI18next} from '@hoc/withI18next';
 

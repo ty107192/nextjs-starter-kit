@@ -8,22 +8,25 @@ const express = require('express');
 // Middleware require
 const helmet = require('helmet');
 const cookieParser = require('cookie-parser');
-const intlMiddleware = require('../middleware/intl');
 const cors = require('cors');
 const {join} = require('path');
 
 // Routes require
-const webRouter = require('../routes');
-const apiRouter = require('../routes/api');
+const webRouter = require('./routes/web');
+const apiRouter = require('./routes/api');
 
-//i18next
-const {i18nInstance} = require('../i18next');
+// config
+const i18nextConfig = require('./config/lang');
+console.log(i18nextConfig);
+
+// i18next
+const {i18nInstance} = require('./app/modules/i18next');
 const Backend = require('i18next-node-fs-backend');
 const i18nextMiddleware = require('i18next-express-middleware');
 
 
 // Listen Logger
-const logger = require('./logger');
+const logger = require('./app/modules/logger');
 
 
 const customHost = process.env.HOST_URL;
@@ -41,25 +44,7 @@ i18nInstance
     .use(Backend)
     .use(cookieParser())
     .use(i18nextMiddleware.LanguageDetector)
-    .init({
-        preload: ['en-US', 'zh-CN', 'zh-TW'], // preload all langages
-        whitelist: ['en-US', 'zh-CN', 'zh-TW'],
-        fallbackLng: 'en-US',
-        ns: ['common'], // need to preload all the namespaces
-        defaultNS: 'common',
-        load: 'currentOnly', // language codes to lookup, given set language is 'en-US': 'all' --> ['en-US', 'en', 'dev'], 'currentOnly' --> 'en-US', 'languageOnly' --> 'en'
-        detection: {
-            order: ['querystring', 'cookie', 'header'],
-            lookupQuerystring: 'lang',
-            lookupSession: 'i18next',
-            caches: false // ['cookie']
-        },
-        backend: {
-            loadPath: join(__dirname, '../../static/locales/{{lng}}/{{ns}}.json'),
-            addPath: join(__dirname, '../../static/locales/{{lng}}/{{ns}}.missing.json')
-        }
-    }, () => {
-
+    .init(i18nextConfig, () => {
         app.prepare().then(() => {
             const server = express();
 
@@ -71,10 +56,10 @@ i18nInstance
 
             // Middleware
             server.use(i18nextMiddleware.handle(i18nInstance));
-            server.use('/locales', express.static(join(__dirname, '../../static/locales'))); // serve locales for client
-            if(dev){
+            server.use('/resources/lang', express.static(join(__dirname, './resources/lang'))); // serve locales for client
+            if (dev) {
                 // 只有在開發模式才進行補單字
-                server.post('/locales/add/:lng/:ns', i18nextMiddleware.missingKeyHandler(i18nInstance));
+                server.post('/api/lang/add/:lng/:ns', i18nextMiddleware.missingKeyHandler(i18nInstance));
             }
 
             server.use(helmet());
@@ -82,7 +67,7 @@ i18nInstance
 
             // Routes
             server.get('/api/*', apiRouter);
-            server.get('/app/*', (req, res) => {
+            server.get('/view/*', (req, res) => {
                 // 修正 Nextjs關閉文件路由,但 Client rander 問題
                 res.status(404).json({error: 'not found'});
             });
@@ -97,7 +82,6 @@ i18nInstance
                 logger.appStarted(port, prettyHost);
             });
         });
-
     });
 
 

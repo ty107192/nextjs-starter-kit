@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
-import Layout from '@layouts/base';
+import Layout from '@layouts/master';
 import {withI18next} from '@hoc/withI18next';
 
 

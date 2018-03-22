@@ -2,7 +2,7 @@ import {Component} from 'react';
 
 import styled from 'styled-components';
 import Layout from '@layouts/base';
-import {Router} from '@routes';
+import {Router} from 'routes';
 import {withI18next} from '@hoc/withI18next';
 
 

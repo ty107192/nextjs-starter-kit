@@ -9,17 +9,17 @@
       {
         "root": ["./"],
         "alias": {
-          "@atoms": "./src/components/atoms",
-          "@layouts": "./src/components/layouts",
-          "@molecules": "./src/components/molecules",
-          "@organisms": "./src/components/organisms",
-          "@theme": "./src/components/theme",
-          "@hoc": "./src/components/hoc",
-          "@styles": "./src/styles",
-          "@utils": "./src/utils",
-          "@stores": "./src/stores",
-          "@routes": "./src/routes",
-          "@i18next": "./src/i18next"
+          "@atoms": "./resources/components/atoms",
+          "@layouts": "./resources/components/layouts",
+          "@molecules": "./resources/components/molecules",
+          "@organisms": "./resources/components/organisms",
+          "@theme": "./resources/components/theme",
+          "@hoc": "./resources/components/hoc",
+          "@assets": "./resources/assets",
+          "@utils": "./app/utils",
+          "@stores": "./storage/stores",
+          "@routes": "./routes",
+          "@i18next": "./app/modules/i18next"
         }
       }
     ]
