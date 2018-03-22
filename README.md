@@ -1,41 +1,32 @@
-[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/zeit/next.js/tree/master/examples/hello-world)
+# Nextjs 5 Starter Kit
 
-# Hello World example
+本開始模版，使用 Nextjs 5，並以我們常用的需求選取官方提供的範例，拼成一塊基礎的拼圖。
 
-## How to use
+## Feature
+- Server Side Render - Nextjs 5
+- 多國語系 - i18next
+- 程式碼品質
+  - 團隊規範 ESLint
+  - 元件測試 Jest
+  - 確保邏輯異動為改變前端顯示樣式 Jest Snapshots
+  - 增強型別 prop-types & Flow
+- 樣式管理
+  - 元件化樣式降低耦合與污染 Styled-component
+  - 全域樣式 SCSS
+  - 讀取進度條 nprogress
+  - 元件開發 Storybook
+- 狀態管理
+  - Mobx 或 Redux (尚未決定)
+- Serverless
+  - 安全性套件 helmet
+  - 後端渲染服務 Express
+- 測試工具
+  - 模擬API測試 json-server
+  
+  
+## 注意事項
+- 若非必要使用到 JQuery套件，盡量不使用JQuery，因為會影響到 Virtual DOM 判定進而影響渲染效能，ref 也避免使用（盡量）
 
-### Using `create-next-app`
-
-Download [`create-next-app`](https://github.com/segmentio/create-next-app) to bootstrap the example:
-
-```bash
-npx create-next-app --example hello-world hello-world-app
-# or
-yarn create next-app --example hello-world hello-world-app
-```
-
-### Download manually
-
-Download the example [or clone the repo](https://github.com/zeit/next.js):
-
-```bash
-curl https://codeload.github.com/zeit/next.js/tar.gz/canary | tar -xz --strip=2 next.js-canary/examples/hello-world
-cd hello-world
-```
-
-Install it and run:
-
-```bash
-npm install
-npm run dev
-```
-
-Deploy it to the cloud with [now](https://zeit.co/now) ([download](https://zeit.co/download))
-
-```bash
-now
-```
-
-## The idea behind the example
-
-This example shows the most basic idea behind Next. We have 2 pages: `pages/index.js` and `pages/about.js`. The former responds to `/` requests and the latter to `/about`. Using `next/link` you can add hyperlinks between them with universal routing capabilities.
+## 參考靈感
+- Laravel 5.6
+- RAN
