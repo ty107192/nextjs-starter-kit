@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '@components/layouts/master';
 import Link from '@components/atoms/link';
-import {withI18next} from '@components/hoc/withI18next';
+import {withI18next} from '@hoc/withI18next';
 
 
 class Home extends React.PureComponent {

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {i18nInstance} from '@modules/i18next';
 import classNames from "classnames";
-import {withI18next} from '@components/hoc/withI18next';
+import {withI18next} from '@hoc/withI18next';
 
 
 class NavLang extends React.PureComponent {

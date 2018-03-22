@@ -10,6 +10,7 @@
         "root": ["./"],
         "alias": {
           "@components": "./resources/components",
+          "@hoc": "./resources/hoc",
           "@assets": "./resources/assets",
           "@utils": "./app/utils",
           "@modules": "./app/modules",
