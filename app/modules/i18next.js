@@ -67,5 +67,5 @@ const getInitialProps = (req, namespaces) => {
 module.exports = {
     getInitialProps,
     i18nInstance,
-    I18n: i18next.default
+    i18n: i18next.default
 };

@@ -1,10 +1,10 @@
 /* eslint import/prefer-default-export:off */
 
 import {translate} from 'react-i18next';
-import {getInitialProps, I18n} from '@modules/i18next';
+import {getInitialProps, i18n} from '@modules/i18next';
 
 export const withI18next = (namespaces = ['common']) => (ComposedComponent) => {
-    const Extended = translate(namespaces, {i18n: I18n, wait: process.browser})(ComposedComponent);
+    const Extended = translate(namespaces, {i18n: i18n, wait: process.browser})(ComposedComponent);
 
     Extended.getInitialProps = async (ctx) => {
         const composedInitialProps = ComposedComponent.getInitialProps
