@@ -7,17 +7,12 @@ module.exports = {
         extensions: ['.js', '.jsx'],
         alias: {
             // CUSTOM PACKAGES:
-            '@atoms': path.resolve(__dirname, 'src/components/atoms'),
-            '@layouts': path.resolve(__dirname, 'src/components/layouts'),
-            '@molecules': path.resolve(__dirname, 'src/components/molecules'),
-            '@organisms': path.resolve(__dirname, 'src/components/organisms'),
-            '@theme': path.resolve(__dirname, 'src/components/theme'),
-            '@hoc': path.resolve(__dirname, 'src/components/hoc'),
-            '@styles': path.resolve(__dirname, 'src/styles'),
-            '@utils': path.resolve(__dirname, 'src/utils'),
-            '@stores': path.resolve(__dirname, 'src/stores'),
-            '@routes': path.resolve(__dirname, 'src/routes'),
-            '@i18next': path.resolve(__dirname, 'src/i18next')
+            '@components': path.resolve(__dirname, 'resources/components'),
+            '@assets': path.resolve(__dirname, 'resources/assets'),
+            '@utils': path.resolve(__dirname, 'app/utils'),
+            '@modules': path.resolve(__dirname, 'app/modules'),
+            '@stores': path.resolve(__dirname, 'storage/stores'),
+            '@routes': path.resolve(__dirname, 'routes')
         }
     }
 };

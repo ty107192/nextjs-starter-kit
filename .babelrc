@@ -9,17 +9,12 @@
       {
         "root": ["./"],
         "alias": {
-          "@atoms": "./src/components/atoms",
-          "@layouts": "./src/components/layouts",
-          "@molecules": "./src/components/molecules",
-          "@organisms": "./src/components/organisms",
-          "@theme": "./src/components/theme",
-          "@hoc": "./src/components/hoc",
-          "@styles": "./src/styles",
-          "@utils": "./src/utils",
-          "@stores": "./src/stores",
-          "@routes": "./src/routes",
-          "@i18next": "./src/i18next"
+          "@components": "./resources/components",
+          "@assets": "./resources/assets",
+          "@utils": "./app/utils",
+          "@modules": "./app/modules",
+          "@stores": "./storage/stores",
+          "@routes": "./routes"
         }
       }
     ]
