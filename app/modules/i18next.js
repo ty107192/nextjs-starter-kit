@@ -22,7 +22,7 @@ const options = {
     },
 
     debug: i18nextConfig.debug,
-    saveMissing: false,
+    saveMissing: i18nextConfig.saveMissing,
     lowerCaseLng: i18nextConfig.lowerCaseLng,
     backend: i18nextConfig.backend
 };
