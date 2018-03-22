@@ -12,13 +12,13 @@ export default class NavLang extends React.Component {
     render() {
         return (
             <nav className="text-middle">
-                <ButtonMenu className="btn btn-outline-info" onClick={() => i18nInstance.changeLanguage('zh-TW')}>
+                <ButtonMenu className="btn btn-outline-info" onClick={() => i18nInstance.changeLanguage('zh-tw')}>
                     繁中
                 </ButtonMenu>
-                <ButtonMenu className="btn btn-outline-info" onClick={() => i18nInstance.changeLanguage('zh-CN')}>
+                <ButtonMenu className="btn btn-outline-info" onClick={() => i18nInstance.changeLanguage('zh-cn')}>
                     简中
                 </ButtonMenu>
-                <ButtonMenu className="btn btn-outline-info" onClick={() => i18nInstance.changeLanguage('us-EN')}>
+                <ButtonMenu className="btn btn-outline-info" onClick={() => i18nInstance.changeLanguage('en-us')}>
                     EN
                 </ButtonMenu>
             </nav>

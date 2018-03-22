@@ -17,7 +17,6 @@ const apiRouter = require('./routes/api');
 
 // config
 const i18nextConfig = require('./config/lang');
-console.log(i18nextConfig);
 
 // i18next
 const {i18nInstance} = require('./app/modules/i18next');

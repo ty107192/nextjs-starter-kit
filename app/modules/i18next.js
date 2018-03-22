@@ -2,17 +2,17 @@ const i18next = require('i18next');
 const XHR = require('i18next-xhr-backend');
 const LanguageDetector = require('i18next-browser-languagedetector');
 const cookieParser = require('cookie-parser');
-
+const i18nextConfig = require('../../config/lang');
 // Configuration options
 // https://www.i18next.com/configuration-options.html
 
 const options = {
-    fallbackLng: 'en-US',
-    load: 'currentOnly',
+    fallbackLng: i18nextConfig.fallbackLng,
+    load: i18nextConfig.load,
 
     // have a common namespace used around the full app
-    ns: ['common'],
-    defaultNS: 'common',
+    ns: i18nextConfig.ns,
+    defaultNS: i18nextConfig.defaultNS,
 
     // setting cookie
     detection: {
@@ -21,17 +21,10 @@ const options = {
         caches: ['cookie'] // ['cookie']
     },
 
-    debug: process.env.I18N_DEBUG === 'true',
+    debug: i18nextConfig.debug,
     saveMissing: false,
-
-    interpolation: {
-        escapeValue: false, // not needed for react!!
-        formatSeparator: ',',
-        format: (value, format, lng) => {
-            if (format === 'uppercase') return value.toUpperCase();
-            return value;
-        }
-    }
+    lowerCaseLng: i18nextConfig.lowerCaseLng,
+    backend: i18nextConfig.backend
 };
 
 const i18nInstance = i18next;
