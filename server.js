@@ -1,7 +1,3 @@
-const dotEnv = require('dotenv');
-
-dotEnv.config();
-
 const next = require('next');
 const express = require('express');
 
@@ -16,6 +12,7 @@ const webRouter = require('./routes/web');
 const apiRouter = require('./routes/api');
 
 // config
+const appConfig = require('./config/app');
 const i18nextConfig = require('./config/lang');
 
 // i18next
@@ -28,11 +25,11 @@ const i18nextMiddleware = require('i18next-express-middleware');
 const logger = require('./app/modules/logger');
 
 
-const customHost = process.env.HOST_URL;
+const customHost = appConfig.hostUrl;
 const host = customHost || null;
 const prettyHost = customHost || 'localhost';
-const port = parseInt(process.env.PORT, 10) || 3001;
-const dev = process.env.NODE_ENV !== 'production';
+const port = parseInt(appConfig.hostPort, 10);
+const dev = appConfig.env !== 'production';
 const app = next({dev});
 const handle = webRouter.getRequestHandler(app);
 
@@ -56,7 +53,7 @@ i18nInstance
             // Middleware
             server.use(i18nextMiddleware.handle(i18nInstance));
             server.use('/resources/lang', express.static(join(__dirname, './resources/lang'))); // serve locales for client
-            if (dev) {
+            if (dev && i18nextConfig.saveMissing) {
                 // 只有在開發模式才進行補單字
                 server.post('/api/lang/add/:lng/:ns', i18nextMiddleware.missingKeyHandler(i18nInstance));
             }
