@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
-import Layout from '@layouts/master';
-import {withI18next} from '@hoc/withI18next';
+import Layout from '@components/layouts/master';
+import {withI18next} from '@components/hoc/withI18next';
 
 
 class Home extends Component {

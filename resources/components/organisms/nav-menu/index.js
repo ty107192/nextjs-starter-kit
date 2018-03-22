@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import {asset} from '@utils/uri';
-import Link from '@atoms/link';
-import {withI18next} from '@hoc/withI18next';
+import Link from '@components/atoms/link';
+import {withI18next} from '@components/hoc/withI18next';
 
 
 class NavMenu extends React.Component {

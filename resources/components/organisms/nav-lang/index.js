@@ -5,7 +5,7 @@ import NProgress from 'nprogress';
 import Router from 'next/router';
 import Link from 'next/link';
 import {asset} from '@utils/uri';
-import {i18nInstance} from '@i18next';
+import {i18nInstance} from '@modules/i18next';
 
 
 export default class NavLang extends React.Component {

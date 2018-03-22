@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import Router from 'next/router';
 import Link from 'next/link';
 import {asset} from '@utils/uri';
-import NavLang from '@organisms/nav-lang';
-import NavMenu from '@organisms/nav-menu';
+import NavLang from '@components/organisms/nav-lang';
+import NavMenu from '@components/organisms/nav-menu';
 
 export default class Header extends React.Component {
     render() {

@@ -9,17 +9,12 @@
       {
         "root": ["./"],
         "alias": {
-          "@atoms": "./resources/components/atoms",
-          "@layouts": "./resources/components/layouts",
-          "@molecules": "./resources/components/molecules",
-          "@organisms": "./resources/components/organisms",
-          "@theme": "./resources/components/theme",
-          "@hoc": "./resources/components/hoc",
+          "@components": "./resources/components",
           "@assets": "./resources/assets",
           "@utils": "./app/utils",
+          "@modules": "./app/modules",
           "@stores": "./storage/stores",
-          "@routes": "./routes",
-          "@i18next": "./app/modules/i18next"
+          "@routes": "./routes"
         }
       }
     ]
