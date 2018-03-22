@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Layout from '@components/layouts/master';
 import {withI18next} from '@components/hoc/withI18next';
 
 
-class Home extends Component {
+class Home extends React.PureComponent {
     render() {
         const {t} = {...this.props};
 

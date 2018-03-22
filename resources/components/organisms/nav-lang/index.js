@@ -2,20 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import {i18nInstance} from '@modules/i18next';
 import classNames from "classnames";
+import {withI18next} from '@components/hoc/withI18next';
 
 
-export default class NavLang extends React.Component {
-
-    static defaultProps ={
-        activeLang: ''
-    };
+class NavLang extends React.PureComponent {
 
     render() {
-        const {activeLang} = {...this.props};
+        const {i18n} = {...this.props};
         const checkLang = {
-            zhtw : activeLang === 'zh-tw' ? 'btn-info' : 'btn-outline-info',
-            zhcn : activeLang === 'zh-cn' ? 'btn-info' : 'btn-outline-info',
-            enus : activeLang === 'en-us' ? 'btn-info' : 'btn-outline-info'
+            zhtw : i18n.language === 'zh-tw' ? 'btn-info' : 'btn-outline-info',
+            zhcn : i18n.language === 'zh-cn' ? 'btn-info' : 'btn-outline-info',
+            enus : i18n.language === 'en-us' ? 'btn-info' : 'btn-outline-info'
         };
 
         return (
@@ -37,6 +34,7 @@ export default class NavLang extends React.Component {
     }
 }
 
+export default withI18next()(NavLang);
 
 const ButtonMenu = styled.button`
   margin-left: 5px;

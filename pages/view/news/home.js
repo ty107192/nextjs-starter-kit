@@ -4,7 +4,7 @@ import Link from '@components/atoms/link';
 import {withI18next} from '@components/hoc/withI18next';
 
 
-class Home extends React.Component {
+class Home extends React.PureComponent {
     render() {
         const {t} = {...this.props};
 

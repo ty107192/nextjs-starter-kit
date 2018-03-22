@@ -6,7 +6,7 @@ import {withI18next} from '@components/hoc/withI18next';
 import {asset} from '@utils/uri';
 
 
-class Detail extends React.Component {
+class Detail extends React.PureComponent {
     render() {
         const {url} = {...this.props};
         return (

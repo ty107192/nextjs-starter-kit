@@ -1,13 +1,10 @@
 import React from 'react';
-import Head from 'next/head';
 import styled from 'styled-components';
 import Router from 'next/router';
-import Link from 'next/link';
-import {asset} from '@utils/uri';
 import NavLang from '@components/organisms/nav-lang';
 import NavMenu from '@components/organisms/nav-menu';
 
-export default class Header extends React.Component {
+export default class Header extends React.PureComponent {
     render() {
         return (
             <HeaderCustom>
