@@ -5,7 +5,8 @@
     "dev": "node ./server",
     "build": "next build",
     "start": "NODE_ENV=production node ./server",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
   },
   "dependencies": {
     "@zeit/next-sass": "^0.1.1",

@@ -80,12 +80,3 @@ i18nInstance
         });
     });
 
-
-i18nInstance.on('languageChanged', (lng) => {
-    // Keep language in sync
-    req.language = req.locale = req.lng = lng;
-    req.languages = i18next.services.languageUtils.toResolveHierarchy(lng);
-    if (i18next.services.languageDetector) {
-        i18next.services.languageDetector.cacheUserLanguage(req, res, lng);
-    }
-});

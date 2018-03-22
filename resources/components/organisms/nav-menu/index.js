@@ -30,5 +30,5 @@ const MenuLink = styled.a`
   &.active{
     color: #e00025;
   }
-`
+`;
 

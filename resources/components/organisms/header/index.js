@@ -47,4 +47,4 @@ const Title = styled.span`
       color:#2be0a8;
      }
    }
-`
+`;
