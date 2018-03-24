@@ -1,7 +1,8 @@
 {
   "menu": {
     "home": "Home",
-    "news": "News"
+    "news": "Comics",
+    "counter": "Game"
   },
   "home": {
     "title": "React A JavaScript library for building user interfaces",
@@ -9,7 +10,7 @@
     "sub-desc": "We don’t make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code."
   },
   "news": {
-    "firstInfo": "vue: Progressive framework for building user interfaces",
-    "secondInfo": "Fkill-cli: cross-platform kill tool"
+    "firstInfo": "Re: Different world life starting from scratch",
+    "secondInfo": "Sword Art Online"
   }
 }

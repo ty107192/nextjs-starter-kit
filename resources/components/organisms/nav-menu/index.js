@@ -17,6 +17,10 @@ class NavMenu extends React.PureComponent {
                 <Link activeClassName="active" route="news">
                     <MenuLink href="javascript:;">{t('menu.news')}</MenuLink>
                 </Link>
+                <span> | </span>
+                <Link activeClassName="active" route="counter">
+                    <MenuLink href="javascript:;">{t('menu.counter')}</MenuLink>
+                </Link>
             </nav>
         );
     }
