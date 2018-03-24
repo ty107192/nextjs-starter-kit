@@ -1,7 +1,7 @@
 import React from 'react';
 
 import styled from 'styled-components';
-import Layout from '@components/layouts/master';
+import Layout from '@components/layouts/Master';
 import {withI18next} from '@hoc/withI18next';
 import {asset} from '@utils/uri';
 

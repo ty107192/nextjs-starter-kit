@@ -1,29 +1,22 @@
 import React from 'react'
 import {bindActionCreators} from 'redux'
-import {initStore, startClock, addCount, serverRenderClock} from '../../store'
+import {initStore, addCount} from '@store'
 import withRedux from 'next-redux-wrapper';
-import Clock from '@components/atoms/Clock';
 import AddCount from '@components/atoms/AddCount';
-import Layout from "@components/layouts/master";
+import Layout from "@components/layouts/Master";
 import {withI18next} from '@hoc/withI18next';
 import {asset} from "@utils/uri/index";
 
 
 class Counter extends React.PureComponent {
     static getInitialProps({store, isServer}) {
-        store.dispatch(serverRenderClock(isServer))
+        // store.dispatch(serverRenderClock(isServer))
         // store.dispatch(addCount())
 
         return {isServer}
     }
 
-    componentDidMount() {
-        this.timer = this.props.startClock()
-    }
 
-    componentWillUnmount() {
-        clearInterval(this.timer)
-    }
 
     render() {
         const {t} = {...this.props};
@@ -56,7 +49,6 @@ class Counter extends React.PureComponent {
 const mapDispatchToProps = (dispatch) => {
     return {
         addCount: bindActionCreators(addCount, dispatch),
-        startClock: bindActionCreators(startClock, dispatch)
     }
 }
 

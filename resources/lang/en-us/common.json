@@ -1,15 +1,15 @@
 {
   "menu": {
     "home": "Home",
-    "news": "Comics",
-    "counter": "Game"
+    "comics": "Comics",
+    "game": "Game"
   },
   "home": {
     "title": "React A JavaScript library for building user interfaces",
     "sub-title": "Learn Once, Write Anywhere",
     "sub-desc": "We don’t make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code."
   },
-  "news": {
+  "comics": {
     "firstInfo": "Re: Different world life starting from scratch",
     "secondInfo": "Sword Art Online"
   }

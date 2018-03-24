@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Router from 'next/router';
-import NavLang from '@components/organisms/nav-lang';
-import NavMenu from '@components/organisms/nav-menu';
+import NavLang from '@components/organisms/NavLang';
+import NavMenu from '@components/organisms/NavMenu';
 
 export default class Header extends React.PureComponent {
     render() {

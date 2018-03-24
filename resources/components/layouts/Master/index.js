@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Router from 'next/router';
 import NProgress from 'nprogress';
-import Header from '@components/organisms/header';
+import Header from '@components/organisms/Header';
 import '@assets/sass/dist/app.scss';
 
 Router.onRouteChangeStart = url => NProgress.start();

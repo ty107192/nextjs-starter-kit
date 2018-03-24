@@ -1,6 +1,6 @@
 import React from 'react';
-import Layout from '@components/layouts/master';
-import Link from '@components/atoms/link';
+import Layout from '@components/layouts/Master';
+import Link from '@components/atoms/Link';
 import {withI18next} from '@hoc/withI18next';
 
 
@@ -9,22 +9,22 @@ class Home extends React.PureComponent {
         const {t} = {...this.props};
 
         return (
-            <Layout title={t('menu.news')}>
+            <Layout title={t('menu.comics')}>
                 <section>
                     <div className="container">
                         <div className="row">
                             <div className="col-12">
-                                <h1>{t('menu.news')}</h1>
+                                <h1>{t('menu.comics')}</h1>
                                 <div style={{paddingTop: '20px'}}>
                                     <ol>
                                         <li>
-                                            <Link route="news-detail" params={{id: 1}}>
-                                                <a>{t('news.firstInfo')}</a>
+                                            <Link route="comics-detail" params={{id: 1}}>
+                                                <a>{t('comics.firstInfo')}</a>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link route="news-detail" params={{id: 2}}>
-                                                <a>{t('news.secondInfo')}</a>
+                                            <Link route="comics-detail" params={{id: 2}}>
+                                                <a>{t('comics.secondInfo')}</a>
                                             </Link>
                                         </li>
                                     </ol>
