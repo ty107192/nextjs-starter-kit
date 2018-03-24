@@ -16,7 +16,7 @@ class AddCount extends Component {
                     💖 x<span>{count}</span>
                 </div>
                 <div className="col">
-                    <button className="btn btn-danger btn-xs" onClick={this.add}>投幣增加生命</button>
+                    <button className="btn btn-danger btn-xs" onClick={this.add}>投幣</button>
                 </div>
             </div>
         )

@@ -12,7 +12,7 @@ import {asset} from "@utils/uri/index";
 class Counter extends React.PureComponent {
     static getInitialProps({store, isServer}) {
         store.dispatch(serverRenderClock(isServer))
-        store.dispatch(addCount())
+        // store.dispatch(addCount())
 
         return {isServer}
     }
@@ -34,10 +34,10 @@ class Counter extends React.PureComponent {
                     <div className="container">
                         <div className="row">
                             <div className="col-12">
-                                <h1>吞食天地 Redux 呂布版</h1>
+                                <h1>吞食天地 Redux</h1>
                                 <div style={{paddingTop: '20px'}}>
                                     <h2>
-                                        <img className="img-fluid" src={asset('img/game.png')}/>
+                                        <img className="img-fluid" src={asset('img/game.gif')}/>
                                     </h2>
                                 </div>
 
