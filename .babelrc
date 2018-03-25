@@ -14,7 +14,7 @@
           "@assets": "./resources/assets",
           "@utils": "./app/utils",
           "@modules": "./app/modules",
-          "@store": "./storage/store",
+          "@stores": "./storage/stores",
           "@routes": "./routes"
         }
       }

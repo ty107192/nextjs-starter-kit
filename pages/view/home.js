@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Layout from '@components/layouts/Master';
 import {withI18next} from '@hoc/withI18next';
 import withRedux from 'next-redux-wrapper';
-import {initStore} from '@store'
+import {initStore} from '@stores'
 
 
 class Home extends React.PureComponent {
@@ -37,4 +37,4 @@ class Home extends React.PureComponent {
 }
 
 
-export default withI18next()(withRedux(initStore, null, null)(Home))
+export default withI18next()(withRedux(initStore)(Home))
