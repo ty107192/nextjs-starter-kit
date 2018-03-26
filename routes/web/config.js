@@ -1,9 +1,9 @@
 /* eslint no-multi-assign: "off" */
 const rules = [
     {name: 'home', pattern: '/', page: 'home'},
-    {name: 'news', pattern: '/news', page: 'news/home'},
-    {name: 'news-detail', pattern: '/news/:id', page: 'news/detail'},
-    {name: 'about', pattern: '/about', page: 'about'}
+    {name: 'comics', pattern: '/comics', page: 'comics/home'},
+    {name: 'comics-detail', pattern: '/comics/:id', page: 'comics/detail'},
+    {name: 'game', pattern: '/game', page: 'game'}
 ];
 
 module.exports = rules;

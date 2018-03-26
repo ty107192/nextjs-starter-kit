@@ -1,15 +1,20 @@
 {
   "menu": {
     "home": "Home",
-    "news": "News"
+    "comics": "Comics",
+    "game": "Game"
   },
   "home": {
     "title": "React A JavaScript library for building user interfaces",
     "sub-title": "Learn Once, Write Anywhere",
     "sub-desc": "We don’t make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code."
   },
-  "news": {
-    "firstInfo": "vue: Progressive framework for building user interfaces",
-    "secondInfo": "Fkill-cli: cross-platform kill tool"
+  "comics": {
+    "firstInfo": "Re: Different world life starting from scratch",
+    "secondInfo": "Sword Art Online"
+  },
+  "game":{
+    "title": "Devour Earth Redux",
+    "desc": "(You must have more than 1 life to play)"
   }
 }

@@ -1,12 +1,13 @@
 import React from 'react';
 
 import styled from 'styled-components';
-import Layout from '@components/layouts/master';
+import Layout from '@components/layouts/Master';
 import {withI18next} from '@hoc/withI18next';
 import {asset} from '@utils/uri';
 
+@withI18next()
 
-class Detail extends React.PureComponent {
+export default class extends React.PureComponent {
     render() {
         const {url} = {...this.props};
         return (
@@ -24,5 +25,3 @@ class Detail extends React.PureComponent {
         );
     }
 }
-
-export default withI18next()(Detail);
