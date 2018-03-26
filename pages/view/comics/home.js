@@ -1,10 +1,10 @@
 import React from 'react';
 import Layout from '@components/layouts/Master';
 import Link from '@components/atoms/Link';
-import {withI18next} from '@hoc/withI18next';
+import withI18Next from '@hoc/withI18Next';
 
 
-@withI18next()
+@withI18Next
 
 export default class extends React.PureComponent {
     render() {

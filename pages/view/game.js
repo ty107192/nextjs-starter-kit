@@ -1,35 +1,32 @@
-import React from 'react'
+import React from 'react';
 import {connect} from 'react-redux';
-import {initStore} from '@stores'
-import {addLife} from '@stores/actions/game'
-import withRedux from 'next-redux-wrapper';
+import {addLife} from '@stores/actions/game';
 import AddLife from '@components/atoms/AddLife';
-import Layout from "@components/layouts/Master";
-import {withI18next} from '@hoc/withI18next';
-import {asset} from "@utils/uri/index";
+import Layout from '@components/layouts/Master';
+import {asset} from '@utils/uri';
+import withI18Next from '@hoc/withI18Next';
+import withRedux from '@hoc/withRedux';
 
-
-const mapStateToProps = (state) => ({
-    gameLife: state.game.life,
+const mapStateToProps = state => ({
+    gameLife: state.game.life
 });
 
 
-@withI18next()
-@withRedux(initStore, null, {addLife})
-@connect(mapStateToProps)
+@withI18Next
+@withRedux
+@connect(mapStateToProps, {addLife})
 
 export default class extends React.PureComponent {
     static getInitialProps({store, isServer}) {
-        //剛進入就送一條命, 這裡可已改成 呼叫API給預設值
-        store.dispatch(addLife())
+        // 剛進入就送一條命, 這裡可已改成 呼叫API給預設值
+        store.dispatch(addLife());
 
-        return {isServer}
+        return {isServer};
     }
 
 
-
     render() {
-        const {t,gameLife} = {...this.props};
+        const {t, gameLife} = {...this.props};
 
         return (
             <Layout title={t('menu.game')}>
@@ -56,6 +53,6 @@ export default class extends React.PureComponent {
                     </div>
                 </section>
             </Layout>
-        )
+        );
     }
 }

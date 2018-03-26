@@ -2,10 +2,10 @@ import React from 'react';
 
 import styled from 'styled-components';
 import Layout from '@components/layouts/Master';
-import {withI18next} from '@hoc/withI18next';
+import withI18Next from '@hoc/withI18Next';
 import {asset} from '@utils/uri';
 
-@withI18next()
+@withI18Next
 
 export default class extends React.PureComponent {
     render() {

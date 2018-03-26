@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from '@components/atoms/Link';
-import {withI18next} from '@hoc/withI18next';
+import withI18Next from '@hoc/withI18Next';
 
-
-class NavMenu extends React.PureComponent {
+@withI18Next
+export default class extends React.PureComponent {
     render() {
         const {t} = {...this.props};
 
@@ -25,8 +25,6 @@ class NavMenu extends React.PureComponent {
         );
     }
 }
-
-export default withI18next()(NavMenu);
 
 const MenuLink = styled.a`
   color: #fff;

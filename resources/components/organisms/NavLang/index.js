@@ -2,10 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import {i18nInstance} from '@modules/i18next';
 import classNames from 'classnames';
-import {withI18next} from '@hoc/withI18next';
+import withI18Next from '@hoc/withI18Next';
 
+@withI18Next
 
-class NavLang extends React.PureComponent {
+export default class extends React.PureComponent {
     render() {
         const {i18n} = {...this.props};
         const checkLang = {
@@ -38,8 +39,6 @@ class NavLang extends React.PureComponent {
         );
     }
 }
-
-export default withI18next()(NavLang);
 
 const ButtonMenu = styled.button`
   margin-left: 5px;

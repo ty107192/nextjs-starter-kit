@@ -1,13 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import Layout from '@components/layouts/Master';
-import {withI18next} from '@hoc/withI18next';
-import withRedux from 'next-redux-wrapper';
-import {initStore} from '@stores'
+import withI18Next from '@hoc/withI18Next';
+import withRedux from '@hoc/withRedux';
 
 
-@withI18next()
-@withRedux(initStore)
+@withI18Next
+@withRedux
 
 export default class extends React.PureComponent {
     render() {
@@ -38,5 +37,4 @@ export default class extends React.PureComponent {
         );
     }
 }
-
 
