@@ -12,5 +12,9 @@
   "comics": {
     "firstInfo": "Re: Different world life starting from scratch",
     "secondInfo": "Sword Art Online"
+  },
+  "game":{
+    "title": "Devour Earth Redux",
+    "desc": "(You must have more than 1 life to play)"
   }
 }

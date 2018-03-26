@@ -4,7 +4,9 @@ import Link from '@components/atoms/Link';
 import {withI18next} from '@hoc/withI18next';
 
 
-class Home extends React.PureComponent {
+@withI18next()
+
+export default class extends React.PureComponent {
     render() {
         const {t} = {...this.props};
 
@@ -38,6 +40,3 @@ class Home extends React.PureComponent {
         );
     }
 }
-
-export default withI18next()(Home);
-

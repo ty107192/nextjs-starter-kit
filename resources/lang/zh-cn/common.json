@@ -12,5 +12,9 @@
   "comics": {
     "firstInfo": "Re:从零开始的异世界生活",
     "secondInfo": "刀剑神域"
+  },
+  "game":{
+    "title": "吞食天地 Redux",
+    "desc": "(你必须要大于1条生命才可以游玩)"
   }
 }

@@ -2,7 +2,16 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {addLife, subLife} from '@stores/actions/game'
 
-class AddLife extends React.PureComponent {
+
+
+const mapStateToProps = (state) => ({
+    gameLife: state.game.life,
+});
+
+@connect(mapStateToProps, {addLife, subLife})
+
+
+export default class extends React.PureComponent {
     add = () => {
         this.props.addLife()
     }
@@ -26,14 +35,3 @@ class AddLife extends React.PureComponent {
         )
     }
 }
-
-
-
-const mapStateToProps = (state) => ({
-    gameLife: state.game.life,
-});
-
-
-//原本應該傳入 props 為 count 參數, 與 addCount 方法
-//現在改為從 stores 從中間接入把 redux的state放到 該元件的props, 也就是新增新的方法為 stores, 取代原本的作法(外部傳入 props)
-export default connect(mapStateToProps, {addLife, subLife})(AddLife)

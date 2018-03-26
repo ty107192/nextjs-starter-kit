@@ -6,7 +6,10 @@ import withRedux from 'next-redux-wrapper';
 import {initStore} from '@stores'
 
 
-class Home extends React.PureComponent {
+@withI18next()
+@withRedux(initStore)
+
+export default class extends React.PureComponent {
     render() {
         const {t} = {...this.props};
 
@@ -37,4 +40,3 @@ class Home extends React.PureComponent {
 }
 
 
-export default withI18next()(withRedux(initStore)(Home))

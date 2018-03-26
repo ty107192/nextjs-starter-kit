@@ -1,16 +1,11 @@
+import {ADD_LIFE, SUB_LIFE} from './';
 
-import { ADD_LIFE, SUB_LIFE } from './'
+export const addLife = (payload) => ({
+    type: ADD_LIFE,
+    payload
+});
 
-export function addLife(life) {
-    return {
-        type: ADD_LIFE,
-        life
-    }
-}
-
-export function subLife(life) {
-    return {
-        type: SUB_LIFE,
-        life
-    }
-}
+export const subLife = (payload) => ({
+    type: SUB_LIFE,
+    payload
+});
