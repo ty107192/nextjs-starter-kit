@@ -16,7 +16,7 @@
   - 讀取進度條 nprogress
   - 元件開發 Storybook
 - 狀態管理
-  - Mobx 或 Redux (尚未決定)
+  - Redux
 - Serverless
   - 安全性套件 helmet
   - 後端渲染服務 Express
