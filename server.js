@@ -51,6 +51,7 @@ i18nInstance
             }));
 
             // Middleware
+            server.use(express.static('static/root'));
             server.use(i18nextMiddleware.handle(i18nInstance));
             server.use('/resources/lang', express.static(join(__dirname, './resources/lang'))); // serve locales for client
             if (dev && i18nextConfig.saveMissing) {
