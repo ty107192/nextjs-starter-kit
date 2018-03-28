@@ -49,6 +49,7 @@
   },
   "devDependencies": {
     "@sambego/storybook-state": "^1.0.7",
+    "@storybook/addon-actions": "^3.3.15",
     "@storybook/react": "^3.3.15",
     "babel-eslint": "^8.2.1",
     "eslint": "^4.17.0",
