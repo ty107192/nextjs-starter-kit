@@ -45,8 +45,6 @@ i18nInstance
             const server = express();
 
             server.use(cors({
-                origin:
-                    prettyHost.indexOf('http') !== -1 ? prettyHost : `http://${prettyHost}`,
                 credentials: true
             }));
 
