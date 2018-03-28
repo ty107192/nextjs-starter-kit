@@ -1,5 +1,8 @@
 const {join} = require('path');
+const dotEnv = require('dotenv');
 
+dotEnv.config();
+const env = process.env;
 const config = {
     preload: ['en-us'], // preload all langages
     whitelist: ['en-us', 'zh-cn', 'zh-tw'], // 白名單
@@ -14,11 +17,11 @@ const config = {
         caches: false // client-side:false, server-side: ['cookie']
     },
     backend: {
-        loadPath: join(__dirname, '../resources/lang/{{lng}}/{{ns}}.json'),
-        addPath: join(__dirname, '../resources/lang/{{lng}}/{{ns}}.missing.json')
+        loadPath: env.NODE_ENV !== 'storybook' ? join(__dirname, '../resources/lang/{{lng}}/{{ns}}.json') : '//localhost:3001/resources/lang/{{lng}}/{{ns}}.json',
+        addPath: env.NODE_ENV !== 'storybook' ? join(__dirname, '../resources/lang/{{lng}}/{{ns}}.missing.json') : '//localhost:3001/resources/lang/{{lng}}/{{ns}}.missing.json'
     },
-    // 追加
-    debug: process.env.I18N_DEBUG === 'true',
+    // ======= Server端追加=======
+    debug: env.I18N_DEBUG === 'true',
     saveMissing: false,
     lowerCaseLng: true // 是否改成小寫 en-US
 };

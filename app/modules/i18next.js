@@ -1,10 +1,10 @@
+// this a client-side setting
+// Configuration options => https://www.i18next.com/configuration-options.html
 const i18next = require('i18next');
 const XHR = require('i18next-xhr-backend');
 const LanguageDetector = require('i18next-browser-languagedetector');
 const cookieParser = require('cookie-parser');
 const i18nextConfig = require('../../config/lang');
-// Configuration options
-// https://www.i18next.com/configuration-options.html
 
 const options = {
     fallbackLng: i18nextConfig.fallbackLng,

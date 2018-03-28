@@ -38,8 +38,13 @@ module.exports = (storybookBaseConfig, configType) => {
                 }
             }
         }
-
     );
+
+
+    storybookBaseConfig.node = {
+        fs: 'empty'
+    };
+
 
     // Return the altered config
     return storybookBaseConfig;

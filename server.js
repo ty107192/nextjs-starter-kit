@@ -33,7 +33,6 @@ const dev = appConfig.env !== 'production';
 const app = next({dev});
 const handle = webRouter.getRequestHandler(app);
 
-
 // init i18next with serverside settings
 // using i18next-express-middleware
 i18nInstance
@@ -44,11 +43,18 @@ i18nInstance
         app.prepare().then(() => {
             const server = express();
 
-            server.use(cors({
-                origin:
-                    prettyHost.indexOf('http') !== -1 ? prettyHost : `http://${prettyHost}`,
-                credentials: true
-            }));
+
+            const corsOptions = {
+                origin: (origin, callback) => {
+                    if (appConfig.cors.whitelist.indexOf(origin.replace(/(https?|http):\/\//, '')) !== -1) {
+                        callback(null, true);
+                    } else {
+                        callback(new Error('Not allowed by CORS'));
+                    }
+                },
+                credentials: appConfig.cors.credentials
+            };
+            server.use(cors(corsOptions));
 
             // Middleware
             server.use(express.static('static/root'));
