@@ -27,9 +27,5 @@
 ## 注意事項
 - 若非必要使用到 JQuery套件，盡量不使用JQuery，因為會影響到 Virtual DOM 判定進而影響渲染效能，ref 也避免使用（盡量）
 
-## 參考靈感
-- Laravel 5.6
-- RAN
-
-
-shiningiason1989
+## 專案結構
+請參考 [structure.xmind](./doc/structure.xmind)
