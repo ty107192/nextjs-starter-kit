@@ -7,7 +7,7 @@ import {asset} from '@utils/uri';
 
 @withI18Next
 
-export default class extends React.PureComponent {
+export default class Detail extends React.PureComponent {
     render() {
         const {url} = {...this.props};
         return (

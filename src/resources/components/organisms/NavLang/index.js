@@ -6,7 +6,7 @@ import withI18Next from '@modules/i18next/with-i18next';
 
 @withI18Next
 
-export default class extends React.PureComponent {
+export default class NavLang extends React.PureComponent {
     render() {
         const {i18n} = {...this.props};
         const checkLang = {

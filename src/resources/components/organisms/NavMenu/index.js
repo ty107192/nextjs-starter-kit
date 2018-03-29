@@ -4,7 +4,7 @@ import Link from '@components/atoms/Link';
 import withI18Next from '@modules/i18next/with-i18next';
 
 @withI18Next
-export default class extends React.PureComponent {
+export default class NavMenu extends React.PureComponent {
     render() {
         const {t} = {...this.props};
 

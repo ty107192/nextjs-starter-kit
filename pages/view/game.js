@@ -16,7 +16,7 @@ const mapStateToProps = state => ({
 @withRedux
 @connect(mapStateToProps, {addLife})
 
-export default class extends React.PureComponent {
+export default class Game extends React.PureComponent {
     static getInitialProps({store, isServer}) {
         // 剛進入就送一條命, 這裡可已改成 呼叫API給預設值
         store.dispatch(addLife());

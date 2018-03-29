@@ -8,7 +8,7 @@ import withRedux from '@modules/redux/with-redux';
 @withI18Next
 @withRedux
 
-export default class extends React.PureComponent {
+export default class Home extends React.PureComponent {
     render() {
         const {t} = {...this.props};
 
