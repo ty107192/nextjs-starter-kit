@@ -6,7 +6,8 @@
     "build": "next build",
     "start": "NODE_ENV=production node ./server",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix ."
+    "lint:fix": "eslint --fix .",
+    "storybook": "NODE_ENV=storybook start-storybook -p 9001 -c ./test/storybook"
   },
   "dependencies": {
     "@zeit/next-sass": "^0.1.1",
@@ -47,6 +48,9 @@
     "styled-components": "^3.2.1"
   },
   "devDependencies": {
+    "@sambego/storybook-state": "^1.0.7",
+    "@storybook/addon-actions": "^3.3.15",
+    "@storybook/react": "^3.3.15",
     "babel-eslint": "^8.2.1",
     "eslint": "^4.17.0",
     "eslint-config-airbnb": "^16.1.0",
