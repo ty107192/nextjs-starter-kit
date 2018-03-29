@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withI18Next from '@hoc/withI18Next';
+import withI18Next from '@modules/i18next/withI18Next';
 
 @withI18Next
 
@@ -34,7 +34,9 @@ export default class AddLife extends React.PureComponent {
                         {t('game.coin')}
                     </button>
                     <span/>
-                    <button className="btn btn-danger btn-xs" onClick={this.sub}>退幣</button>
+                    <button className="btn btn-danger btn-xs" onClick={this.sub}>
+                        {t('game.refund')}
+                    </button>
                 </div>
             </div>
         );
