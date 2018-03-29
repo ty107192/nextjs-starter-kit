@@ -2,9 +2,9 @@ import {configure, setAddon} from '@storybook/react';
 
 // import '../static/css/bootstrap.css';
 
-const atoms = require.context('../../resources/components/atoms', true, /\.stories\.js$/);
-const molecules = require.context('../../resources/components/molecules', true, /\.stories\.js$/);
-const organisms = require.context('../../resources/components/organisms', true, /\.stories\.js$/);
+const atoms = require.context('../../src/resources/components/atoms', true, /\.stories\.js$/);
+const molecules = require.context('../../src/resources/components/molecules', true, /\.stories\.js$/);
+const organisms = require.context('../../src/resources/components/organisms', true, /\.stories\.js$/);
 
 function loadStoryFiles() {
     atoms.keys().forEach(filename => atoms(filename));

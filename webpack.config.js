@@ -7,13 +7,13 @@ module.exports = {
         extensions: ['.js', '.jsx'],
         alias: {
             // CUSTOM PACKAGES:
-            '@components': path.resolve(__dirname, 'resources/components'),
-            '@hoc': path.resolve(__dirname, 'resources/hoc'),
-            '@assets': path.resolve(__dirname, 'resources/assets'),
-            '@utils': path.resolve(__dirname, 'app/utils'),
-            '@modules': path.resolve(__dirname, 'app/modules'),
-            '@stores': path.resolve(__dirname, 'storage/stores'),
-            '@routes': path.resolve(__dirname, 'routes')
+            '@components': path.resolve(__dirname, 'src/resources/components'),
+            '@hoc': path.resolve(__dirname, 'src/resources/hoc'),
+            '@assets': path.resolve(__dirname, 'src/resources/assets'),
+            '@utils': path.resolve(__dirname, 'src/utils'),
+            '@modules': path.resolve(__dirname, 'src/modules'),
+            '@stores': path.resolve(__dirname, 'src/modules/redux'),
+            '@routes': path.resolve(__dirname, 'src/routes')
         }
     }
 };

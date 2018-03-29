@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from '@components/atoms/Link';
-import withI18Next from '@hoc/withI18Next';
+import withI18Next from '@modules/i18next/withI18Next';
 
 @withI18Next
 export default class extends React.PureComponent {

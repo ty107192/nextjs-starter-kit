@@ -3,8 +3,8 @@
 import React, {Children} from 'react';
 import PropTypes from 'prop-types';
 import {withRouter} from 'next/router';
-import {Link} from '@routes/web';
-import rules from '@routes/web/config';
+import {Link} from '@routes';
+import rules from '@routes/config';
 import {find, words} from 'lodash';
 
 const ActiveLink = ({router, children, ...props}) => {

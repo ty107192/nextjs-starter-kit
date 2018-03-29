@@ -14,8 +14,8 @@ const config = {
         caches: false // client-side:false, server-side: ['cookie']
     },
     backend: {
-        loadPath: process.env.NODE_ENV !== 'storybook' ? join(__dirname, '../resources/lang/{{lng}}/{{ns}}.json') : '//localhost:3001/resources/lang/{{lng}}/{{ns}}.json',
-        addPath: process.env.NODE_ENV !== 'storybook' ? join(__dirname, '../resources/lang/{{lng}}/{{ns}}.missing.json') : '//localhost:3001/resources/lang/{{lng}}/{{ns}}.missing.json'
+        loadPath: process.env.NODE_ENV !== 'storybook' ? join(__dirname, '../../lang/{{lng}}/{{ns}}.json') : '//localhost:3001/lang/{{lng}}/{{ns}}.json',
+        addPath: process.env.NODE_ENV !== 'storybook' ? join(__dirname, '../../lang/{{lng}}/{{ns}}.missing.json') : '//localhost:3001/lang/{{lng}}/{{ns}}.missing.json'
     },
     // 追加
     debug: process.env.I18N_DEBUG === 'true',

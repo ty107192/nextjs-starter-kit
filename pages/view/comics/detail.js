@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 import Layout from '@components/layouts/Master';
-import withI18Next from '@hoc/withI18Next';
+import withI18Next from '@modules/i18next/withI18Next';
 import {asset} from '@utils/uri';
 
 @withI18Next

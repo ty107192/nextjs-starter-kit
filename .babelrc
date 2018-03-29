@@ -10,13 +10,13 @@
       {
         "root": ["./"],
         "alias": {
-          "@components": "./resources/components",
-          "@hoc": "./resources/hoc",
-          "@assets": "./resources/assets",
-          "@utils": "./app/utils",
-          "@modules": "./app/modules",
-          "@stores": "./storage/stores",
-          "@routes": "./routes"
+          "@components": "./src/resources/components",
+          "@hoc": "./src/resources/hoc",
+          "@assets": "./src/resources/assets",
+          "@utils": "./src/utils",
+          "@modules": "./src/modules",
+          "@stores": "./src/modules/redux",
+          "@routes": "./src/routes"
         }
       }
     ]
