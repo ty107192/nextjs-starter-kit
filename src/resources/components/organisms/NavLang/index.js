@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import classNames from 'classnames';
 import {i18nInstance} from '@modules/i18next';
-import withI18Next from '@modules/i18next/withI18Next';
+import withI18Next from '@modules/i18next/with-i18next';
 
 @withI18Next
 

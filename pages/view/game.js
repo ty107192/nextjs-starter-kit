@@ -4,8 +4,8 @@ import {addLife} from '@stores/actions/game';
 import AddLife from '@components/atoms/AddLife';
 import Layout from '@components/layouts/Master';
 import {asset} from '@utils/uri';
-import withI18Next from '@modules/i18next/withI18Next';
-import withRedux from '@modules/redux/withRedux';
+import withI18Next from '@modules/i18next/with-i18next';
+import withRedux from '@modules/redux/with-redux';
 
 const mapStateToProps = state => ({
     gameLife: state.game.life

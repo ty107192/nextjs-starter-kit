@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withI18Next from '@modules/i18next/withI18Next';
+import withI18Next from '@modules/i18next/with-i18next';
 
 @withI18Next
 

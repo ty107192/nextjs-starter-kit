@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Layout from '@components/layouts/Master';
-import withI18Next from '@modules/i18next/withI18Next';
-import withRedux from '@modules/redux/withRedux';
+import withI18Next from '@modules/i18next/with-i18next';
+import withRedux from '@modules/redux/with-redux';
 
 
 @withI18Next
