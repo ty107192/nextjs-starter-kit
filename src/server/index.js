@@ -68,7 +68,8 @@ i18nInstance
             server.get('/api/*', apiRouter);
             server.get('/view/*', (req, res) => {
                 // 修正 Nextjs關閉文件路由,但 Client rander 問題
-                res.status(404).json({error: 'not found'});
+                app.render(req, res, '/404');
+                // res.status(404).json({error: 'not found'});
             });
 
             // Any Request
