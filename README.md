@@ -28,4 +28,4 @@
 - 若非必要使用到 JQuery套件，盡量不使用JQuery，因為會影響到 Virtual DOM 判定進而影響渲染效能，ref 也避免使用（盡量）
 
 ## 專案結構
-<img src="./doc/structure/app.jpg"/>
+<img src="./docs/structure/app.jpg"/>
