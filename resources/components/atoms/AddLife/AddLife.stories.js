@@ -4,7 +4,6 @@ import {storiesOf} from '@storybook/react';
 import AddLife from './AddLife';
 // import {addLife, subLife} from '../../../../storage/stores/actions/game';
 
-
 const store = new Store({
     gameLife: 1
 });
