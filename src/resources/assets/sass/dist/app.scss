@@ -1,8 +1,33 @@
-@import "../common/mixin";
+/* ==========================================
+                 Require Setting
+   ========================================== */
+
+// Bootstrap4
+@import "../plugins/bootstrap/require";
+
+// Custom
 @import "../common/variable";
 @import "../common/reboot";
+
+
+
+
+
+
+
+/* ==========================================
+                 Option Setting
+   ========================================== */
+
+// Bootstrap4
+@import "../plugins/bootstrap/option";
+
+
+// NProgress
+@import "../plugins/nprogress/nprogress";
+
+
+// Custom
 @import "../common/button";
 @import "../common/custom";
 
-/* Plugin */
-@import "../plugins/nprogress/nprogress";

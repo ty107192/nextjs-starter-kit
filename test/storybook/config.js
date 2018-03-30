@@ -1,6 +1,6 @@
 import {configure, setAddon} from '@storybook/react';
 
-// import '../static/css/bootstrap.css';
+import '@assets/sass/dist/app.scss';
 
 const atoms = require.context('../../src/resources/components/atoms', true, /\.stories\.js$/);
 const molecules = require.context('../../src/resources/components/molecules', true, /\.stories\.js$/);
