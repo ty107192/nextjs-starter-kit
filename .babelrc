@@ -11,7 +11,6 @@
         "root": ["./"],
         "alias": {
           "@components": "./src/resources/components",
-          "@hoc": "./src/resources/hoc",
           "@assets": "./src/resources/assets",
           "@utils": "./src/utils",
           "@modules": "./src/modules",

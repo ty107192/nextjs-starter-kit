@@ -8,7 +8,6 @@ module.exports = {
         alias: {
             // CUSTOM PACKAGES:
             '@components': path.resolve(__dirname, 'src/resources/components'),
-            '@hoc': path.resolve(__dirname, 'src/resources/hoc'),
             '@assets': path.resolve(__dirname, 'src/resources/assets'),
             '@utils': path.resolve(__dirname, 'src/utils'),
             '@modules': path.resolve(__dirname, 'src/modules'),
