@@ -9,12 +9,13 @@
   - 團隊規範 ESLint
   - 元件測試 Jest
   - 確保邏輯異動為改變前端顯示樣式 Jest Snapshots
-  - 增強型別 prop-types & Flow
+  - 增強型別 prop-types & Flow(未設定)
 - 樣式管理
   - 元件化樣式降低耦合與污染 Styled-component
   - 全域樣式 SCSS
   - 讀取進度條 nprogress
   - 元件開發 Storybook
+  - 樣式框架 Bootstrap-4-Scss
 - 狀態管理
   - Redux
 - Serverless
