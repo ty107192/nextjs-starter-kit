@@ -18,7 +18,7 @@ const options = {
     detection: {
         lookupCookie: 'i18next',
         lookupSession: 'i18next',
-        caches: ['cookie'] // ['cookie']
+        caches: ['cookie']
     },
 
     debug: i18nextConfig.debug,
