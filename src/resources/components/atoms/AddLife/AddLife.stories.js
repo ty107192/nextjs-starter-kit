@@ -16,9 +16,12 @@ const subLife = () => {
     store.set({gameLife: store.get('gameLife') - 1});
 };
 
+
 storiesOf('AddLife', module)
     .add('default', () => (
-        <State store={store}>
-            <AddLife gameLife={store.gameLife} addLife={addLife} subLife={subLife}/>
-        </State>
+        <div className="container">
+            <State store={store}>
+                <AddLife gameLife={store.gameLife} addLife={addLife} subLife={subLife}/>
+            </State>
+        </div>
     ));
