@@ -1,4 +1,4 @@
-// webpack設定至 next.config.js, 這裡設定為 webstorm 識別對應路徑
+// webpack設定至 next.config.js, 這裡設定只是為了輔助 webstorm 識別對應路徑
 
 const path = require('path');
 
