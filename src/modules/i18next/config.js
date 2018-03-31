@@ -15,9 +15,9 @@ const config = {
     lowerCaseLng: true, // 是否改成小寫 en-US
     backend: {
         // 字典檔讀取路徑
-        loadPath: process.env.NODE_ENV !== 'storybook' ? join(__dirname, '../../lang/{{lng}}/{{ns}}.json') : '//localhost:3001/lang/{{lng}}/{{ns}}.json',
+        loadPath: join(__dirname, '../../lang/{{lng}}/{{ns}}.json'),
         // 有使用到卻位定義的字典寫入路徑
-        addPath: process.env.NODE_ENV !== 'storybook' ? join(__dirname, '../../lang/{{lng}}/{{ns}}.missing.json') : '//localhost:3001/lang/{{lng}}/{{ns}}.missing.json'
+        addPath: join(__dirname, '../../lang/{{lng}}/{{ns}}.missing.json')
     },
     // ==================== 只有ServerSide使用, ClientSide不使用這裡的設定 ====================
     detection: {
