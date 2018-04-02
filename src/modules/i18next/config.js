@@ -25,7 +25,12 @@ const config = {
         lookupQuerystring: 'lang', // 如果使用querystring,設定Key （ex: lang -> //localhost/home?lang=en-us)
         lookupSession: 'i18next', // 如果使用session,設定Key
         caches: false // client-side:false, server-side: ['cookie']
-    }
+    },
+    // react i18next special options (optional)
+    // react: {
+    //     wait: false,
+    //     nsMode: 'fallback' // set it to fallback to let passed namespaces to translated hoc act as fallbacks
+    // }
 };
 
 
