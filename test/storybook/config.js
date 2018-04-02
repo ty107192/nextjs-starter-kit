@@ -1,6 +1,8 @@
+/* eslint-disable */
 import {configure, setAddon} from '@storybook/react';
 
 import '@assets/sass/dist/app.scss';
+import './styles/storybook.scss';
 
 const atoms = require.context('../../src/resources/components/atoms', true, /\.stories\.js$/);
 const molecules = require.context('../../src/resources/components/molecules', true, /\.stories\.js$/);

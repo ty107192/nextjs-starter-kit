@@ -8,7 +8,8 @@ export default class AddLife extends React.PureComponent {
     static propTypes = {
         addLife: PropTypes.func.isRequired,
         subLife: PropTypes.func.isRequired,
-        gameLife: PropTypes.number
+        gameLife: PropTypes.number,
+        t: PropTypes.func.isRequired
     };
 
     static defaultProps = {
@@ -17,10 +18,10 @@ export default class AddLife extends React.PureComponent {
 
     add = () => {
         this.props.addLife();
-    }
+    };
     sub = () => {
         this.props.subLife();
-    }
+    };
 
     render() {
         const {gameLife, t} = this.props;
