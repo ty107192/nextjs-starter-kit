@@ -18,7 +18,7 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "storybook": "NODE_ENV=storybook start-storybook -p 9001 -c ./test/storybook",
-    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
+    "precommit-msg": "echo 'Checking your code, please wait...' && exit 0"
   },
   "pre-commit": [ "precommit-msg", "lint" ],
   "dependencies": {
