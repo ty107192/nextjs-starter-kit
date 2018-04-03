@@ -1,6 +1,7 @@
 {
   "name": "nextjs-starter-kit",
   "version": "1.0.0",
+  "author": "imagine10255",
   "license": "MIT",
   "main": "src/service/index.js",
   "engines": {
@@ -17,8 +18,9 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "storybook": "NODE_ENV=storybook start-storybook -p 9001 -c ./test/storybook",
-    "precommit": "yarn lint"
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
   },
+  "pre-commit": [ "precommit-msg", "lint" ],
   "dependencies": {
     "@zeit/next-sass": "^0.1.1",
     "accepts": "^1.3.3",
@@ -79,6 +81,7 @@
     "eslint-plugin-react": "^7.6.1",
     "jest": "^22.4.3",
     "jest-webpack": "^0.4.0",
+    "pre-commit": "^1.2.2",
     "react-addons-test-utils": "^15.6.2",
     "react-test-renderer": "^16.3.0"
   }
