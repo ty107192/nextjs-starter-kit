@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '@components/layouts/Master';
+import Layout from '@components/layouts';
 import Link from '@components/atoms/Link';
 import withI18Next from '@modules/i18next/with-i18next';
 

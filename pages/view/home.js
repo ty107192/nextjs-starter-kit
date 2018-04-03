@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Layout from '@components/layouts/Master';
+import Layout from '@components/layouts';
 import withI18Next from '@modules/i18next/with-i18next';
 import withRedux from '@modules/redux/with-redux';
 import SwitchButton from '@components/atoms/SwitchButton';

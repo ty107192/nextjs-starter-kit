@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {addLife} from '@stores/actions/game';
 import AddLife from '@components/atoms/AddLife';
-import Layout from '@components/layouts/Master';
+import Layout from '@components/layouts';
 import {asset} from '@utils/uri';
 import withI18Next from '@modules/i18next/with-i18next';
 import withRedux from '@modules/redux/with-redux';
