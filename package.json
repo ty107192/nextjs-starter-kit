@@ -7,6 +7,9 @@
     "start": "NODE_ENV=production node ./src/server",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
+    "test": "NODE_ENV=test jest --config ./test/jest/config.js",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "storybook": "NODE_ENV=storybook start-storybook -p 9001 -c ./test/storybook"
   },
   "dependencies": {
@@ -54,16 +57,23 @@
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.15",
     "@storybook/react": "3.4",
+    "@talentui/jest-config": "^1.1.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.17.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jest": "^21.7.0",
+    "eslint-plugin-jest": "^21.15.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.6.1"
+    "eslint-plugin-react": "^7.6.1",
+    "jest": "^22.4.3",
+    "jest-webpack": "^0.4.0",
+    "react-addons-test-utils": "^15.6.2",
+    "react-test-renderer": "^16.3.0"
   },
   "license": "ISC"
 }
