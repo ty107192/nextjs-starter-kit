@@ -1,6 +1,12 @@
 {
-  "name": "nextjs-base-boilerplate",
+  "name": "nextjs-starter-kit",
   "version": "1.0.0",
+  "license": "MIT",
+  "main": "src/service/index.js",
+  "engines": {
+    "node": ">=8.9.1",
+    "npm": ">=5.5.1"
+  },
   "scripts": {
     "dev": "node ./src/server",
     "build": "next build",
@@ -75,6 +81,5 @@
     "jest-webpack": "^0.4.0",
     "react-addons-test-utils": "^15.6.2",
     "react-test-renderer": "^16.3.0"
-  },
-  "license": "ISC"
+  }
 }
