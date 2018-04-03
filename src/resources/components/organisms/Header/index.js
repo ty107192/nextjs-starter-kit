@@ -7,22 +7,13 @@ import NavMenu from '@components/organisms/NavMenu';
 export default class Header extends React.PureComponent {
     render() {
         return (
-            <HeaderCustom>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12 col-sm-auto">
-                            <Title>
-                                <a href="javascript:;" onClick={() => Router.pushRoute('home')}>
-                                    Nextjs Starter Kit
-                                </a>
-                            </Title>
-                        </div>
-                        <div className="col-5">
-                            <NavMenu/>
-                        </div>
-                        <div className="col text-right">
-                            <NavLang/>
-                        </div>
+            <HeaderCustom className="container">
+                <div className="row">
+                    <div className="col col-sm-auto">
+                        <span className="icon icon-logo-ipay"/>
+                    </div>
+                    <div className="col text-right">
+                        <span className="icon icon-bell"/>
                     </div>
                 </div>
             </HeaderCustom>
@@ -31,20 +22,7 @@ export default class Header extends React.PureComponent {
 }
 
 const HeaderCustom = styled.header`
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: #000;
-`;
-
-const Title = styled.span`
-   color: #fff;
-   font-size: 2.4rem;
-    
-   a{
-     color:#fff;
-     
-     &:hover{
-      color:#2be0a8;
-     }
-   }
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-bottom: 2px #28a8df solid;
 `;

@@ -1,5 +1,6 @@
 import Document, {Head, Main, NextScript} from 'next/document';
 import {ServerStyleSheet} from 'styled-components';
+import {asset} from "@utils/uri/index";
 
 export default class MyDocument extends Document {
     static async getInitialProps({renderPage}) {
@@ -13,21 +14,22 @@ export default class MyDocument extends Document {
     render() {
         return (
             <html>
-                <Head>
-                    <meta charSet="utf-8"/>
-                    <meta name="robots" content="index,follow"/>
-                    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
-                    <title>nextjs-base-boilerplate</title>
+            <Head>
+                <meta charSet="utf-8"/>
+                <meta name="robots" content="index,follow"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+                <title>nextjs-base-boilerplate</title>
 
-                    <link rel="stylesheet" href="/_next/static/style.css" />
-                    {this.props.styleTags}
-                </Head>
-                <body>
-                    {/* _document */}
-                    <Main/>
+                <link rel="stylesheet" href={asset('plugins/icomoon/style.css')} />
+                <link rel="stylesheet" href="/_next/static/style.css"/>
+                {this.props.styleTags}
+            </Head>
+            <body>
+            {/* _document */}
+            <Main/>
 
-                    <NextScript/>
-                </body>
+            <NextScript/>
+            </body>
             </html>
         );
     }
