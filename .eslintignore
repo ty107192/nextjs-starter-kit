@@ -5,3 +5,4 @@ src/middleware/*.js
 pages/_document.js
 pages/_error.js
 next.config.js
+static/*
