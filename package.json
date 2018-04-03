@@ -10,7 +10,8 @@
     "test": "NODE_ENV=test jest --config ./test/jest/config.js",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "storybook": "NODE_ENV=storybook start-storybook -p 9001 -c ./test/storybook"
+    "storybook": "NODE_ENV=storybook start-storybook -p 9001 -c ./test/storybook",
+    "precommit": "yarn lint"
   },
   "dependencies": {
     "@zeit/next-sass": "^0.1.1",
