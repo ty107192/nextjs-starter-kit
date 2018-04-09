@@ -26,8 +26,8 @@
     "jsx-a11y/alt-text": "off",
     "import/no-extraneous-dependencies": "off",
     "import/extensions": "off",
-    "import/no-unresolved": "off"
-    
+    "import/no-unresolved": "off",
+    "import/prefer-default-export": "off"
   },
   "globals": {
     "fetch": true,
