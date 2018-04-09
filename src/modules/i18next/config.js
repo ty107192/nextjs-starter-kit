@@ -1,3 +1,4 @@
+//設定Server-Side參數, Client-Side參考這裡的一部分設定
 const {join} = require('path');
 
 const config = {
@@ -24,7 +25,7 @@ const config = {
         order: ['querystring', 'cookie', 'header'], // 允許設定語系的方法 (ex: querystring,cookie,header)
         lookupQuerystring: 'lang', // 如果使用querystring,設定Key （ex: lang -> //localhost/home?lang=en-us)
         lookupSession: 'i18next', // 如果使用session,設定Key
-        caches: false // client-side:false, server-side: ['cookie']
+        caches: false // client-side:['cookie'], server-side: false
     }
     // react i18next special options (optional)
     // react: {
