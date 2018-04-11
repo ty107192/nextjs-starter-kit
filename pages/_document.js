@@ -16,8 +16,7 @@ export default class MyDocument extends Document {
             <html>
             <Head>
                 <meta charSet="utf-8"/>
-                <meta name="robots" content="index,follow"/>
-                <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+                <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
                 <title>nextjs-base-boilerplate</title>
 
                 <link rel="stylesheet" href={asset('plugins/icomoon/style.css')} />
