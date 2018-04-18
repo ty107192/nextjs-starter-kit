@@ -1,4 +1,4 @@
-//設定Server-Side參數, Client-Side參考這裡的一部分設定
+// 設定Server-Side參數, Client-Side參考這裡的一部分設定
 const {join} = require('path');
 
 const config = {
