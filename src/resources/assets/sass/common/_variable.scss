@@ -17,7 +17,7 @@ $font-family-monospace: $font-family-sub;
 $primary: $color-blue;
 $font-size-lg:1.4rem;
 
-//grid
+//grid (請與 src/resources/components/themes/screen.js 設定保持一致)
 $grid-breakpoints: (
         xs: 0,     // (0~575)    map bs3 size: 320,480
         sm: 576px, // (576~767)  map bs3 size: 無
