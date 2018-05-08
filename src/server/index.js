@@ -1,4 +1,4 @@
-const dotEnv = require('dotenv').config();
+// const dotEnv = require('dotenv').config();
 
 const next = require('next');
 const express = require('express');
